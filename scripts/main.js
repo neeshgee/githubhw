@@ -1,15 +1,1 @@
-
-
-
-
-// var input= $(‘form.search input[type=search]’);
-//
-// input.on(‘change’, function(e) {
-// router.navigate(‘#’ + this.value, { trigger: true });
-// })
-// })
-//
-// $(‘form.search’).on(‘submit’, function(e) {
-// e.preventDefault();
-// });
-// })
+$(document).ready(function(){const e="https://api.github.com/users/neeshgee";$(function(){$(".sidebar").ready(function(t){$.ajax({type:"GET",url:e,data:$(this).serialize()}).done(function(e){console.log(e),$(".sidebar h3").text(e.name),$(".sidebar h4").text(e.login),$(".followers").text(e.followers),$(".following").text(e.following)})})})});var Router=Backbone.Router.extend({routes:{"":"home",repositories:"repositories"},home:function(){$.ajax("home.html").then(function(e){$(".content").html(e),$(".home").addClass("active"),$(".repos").removeClass("active")})},repositories:function(){$.ajax("repositories.html").then(function(e){$(".content ").html(e),$(".home").removeClass("active"),$(".repos").addClass("active");$.get("https://api.github.com/users/neeshgee/repos",function(e){$(this).serialize(),console.log(e),$(".content").append("<li>"+e.name+"</li>")})})},initialize:function(){Backbone.history.start()}});$(function(){new Router});
