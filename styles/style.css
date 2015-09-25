@@ -1,0 +1,11 @@
+.content {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  border-bottom: 1px solid whitesmoke;
+}
