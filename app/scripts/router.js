@@ -44,10 +44,13 @@ var Router = Backbone.Router.extend({
       $('.content ').html(page)
       $('.home').removeClass('active');
       $('.repos').addClass('active');
-    var data = $.get('https://api.github.com/users/neeshgee/repos', function (data) {
-      $(this).serialize();
-        console.log(data);
-        $('.content').append('<li>' + data.name + '</li>');
+    var data = $.get('https://api.github.com/users/neeshgee/repos').then(function (data) {
+      // $(this).serialize();
+      console.log(data);
+      $.each(data, function () {
+        $('.content ul.repolist').append('<li>' + this.name + '</li>');
+      })
+
     });
       //console.log(page)
     })

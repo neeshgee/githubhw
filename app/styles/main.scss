@@ -142,7 +142,7 @@ body {
     color: white;
   }
   a:hover {
-  color: #0066CC;
+  color: #3385D6;
   text-decoration: none;
 }
 
@@ -161,15 +161,15 @@ span {
 }
 
 .followers {
-  color: #0066CC;
+  color: #3385D6;
   font-size: 20px;
 }
 .starred {
-  color: #0066CC;
+  color: #3385D6;
   font-size: 14px;
 }
 .following {
-  color: #0066CC;
+  color: #3385D6;
   font-size: 20px;
 }
 
@@ -193,4 +193,15 @@ div .post-1 {
 }
 .link a:hover {
   background-color: transparent;
+}
+
+.repolist {
+  list-style: none;
+  color: #3385D6;
+}
+
+.repolist li {
+  border-bottom: 1px solid whitesmoke;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
